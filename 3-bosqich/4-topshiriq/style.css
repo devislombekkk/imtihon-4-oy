@@ -1,0 +1,104 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    background: #514fb3;
+}
+
+.hide {
+    opacity: 0;
+}
+
+
+
+.btn-container {
+    background: rgb(185, 185, 185);
+    height: 100%;
+    padding: 30px 50px;
+    border-radius: 4px;
+}
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background: #000000;
+    color: white;
+    padding: .7em 1.1em;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+}
+
+button:hover {
+    background: #ffffff;
+    color: black;
+}
+
+
+.black-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    transition: .5s ease-in;
+    z-index: -5;
+}
+
+.black-layer.show {
+    opacity: 0.65;
+    z-index: 1;
+}
+
+
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 570px;
+    max-width: 80%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-570px);
+    transition: .5s ease-in;
+    z-index: 10;
+}
+
+.side-menu.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    font-weight: 700;
+}
+
+.content button {
+    margin-top: 23px;
+}
